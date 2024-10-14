@@ -70,6 +70,6 @@ print(pusty_zbior)  # set()
 zbior2 = {66, 11, 44, 55, 62, 999, 999}
 print(zbior2)  # {66, 55, 999, 11, 44, 62}
 
-# suma zbioró
+# suma zbiorów
 print(zbior | zbior2)  # {33, 66, 999, 11, 44, 77, 45, 18, 54, 55, 62, 31}
 print(zbior.union(zbior2))  # {33, 66, 999, 11, 44, 77, 45, 18, 54, 55, 62, 31}
