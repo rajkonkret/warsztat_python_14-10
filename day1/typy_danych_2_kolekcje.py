@@ -73,3 +73,19 @@ print(zbior2)  # {66, 55, 999, 11, 44, 62}
 # suma zbiorów
 print(zbior | zbior2)  # {33, 66, 999, 11, 44, 77, 45, 18, 54, 55, 62, 31}
 print(zbior.union(zbior2))  # {33, 66, 999, 11, 44, 77, 45, 18, 54, 55, 62, 31}
+
+# częśc wspólna zbiorów
+print(zbior & zbior2)  # {33, 66, 55, 11, 44}
+print(zbior.intersection(zbior2))  # {33, 66, 55, 11, 44}
+
+# różnica
+print(zbior - zbior2)  # {33, 45, 77, 18, 54, 31}
+print(zbior.difference(zbior2))  # {33, 45, 77, 18, 54, 31}
+
+lista = list(zbior)
+print(lista)  # [33, 66, 11, 44, 77, 45, 18, 54, 55, 31]
+
+lista.append(55)
+print(lista)  # [33, 66, 11, 44, 77, 45, 18, 54, 55, 31, 55]
+lista.remove(55)  # usunie pierwsze wystąpienie
+print(lista)  # [33, 66, 11, 44, 77, 45, 18, 54, 31, 55]
