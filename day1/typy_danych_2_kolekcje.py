@@ -89,3 +89,42 @@ lista.append(55)
 print(lista)  # [33, 66, 11, 44, 77, 45, 18, 54, 55, 31, 55]
 lista.remove(55)  # usunie pierwsze wystąpienie
 print(lista)  # [33, 66, 11, 44, 77, 45, 18, 54, 31, 55]
+
+# słownik
+# para klucz-wartość
+# klucze nie mogą sie powtórzyć
+slownik = dict()
+print(slownik)  # {}
+print(type(slownik))  # <class 'dict'>
+
+slownik = {}
+print(slownik)  # {}
+print(type(slownik))  # <class 'dict'>
+
+slownik['name'] = "Radek"
+print(slownik)  # {'name': 'Radek'}
+
+slownik['wiek'] = 39
+print(slownik)  # {'name': 'Radek', 'wiek': 39}
+
+print(slownik.keys())
+print(slownik.values())
+print(slownik.items())
+# dict_keys(['name', 'wiek'])
+# dict_values(['Radek', 39])
+# dict_items([('name', 'Radek'), ('wiek', 39)])
+
+slownik.update({"rok": "2024"})
+print(slownik)  # {'name': 'Radek', 'wiek': 39, 'rok': '2024'}
+print(slownik['name'])  # Radek
+print(slownik.get('Name'))  # None
+print(slownik.get('namE', "default"))  # default
+# Radek
+# Radek
+# Radek
+
+lista.append(55)
+print(lista)  # [33, 66, 11, 44, 77, 45, 18, 54, 31, 55, 55]
+print(dict.fromkeys(lista))
+# {33: None, 66: None, 11: None, 44: None, 77: None, 45: None, 18: None, 54: None, 31: None, 55: None}
+print(list(dict.fromkeys(lista)))  # [33, 66, 11, 44, 77, 45, 18, 54, 31, 55]
