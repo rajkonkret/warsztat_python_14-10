@@ -1,6 +1,6 @@
 # dekorator - funkcja, którą przyjmuje inną funkcję, opakowuje nową funkcjonalnością
 # dekoratory wykorzystują zasadę funkcji wewnętrznej, zagnieżdżonej
-def dekor(func, a):
+def dekor(func):
     def wew():
         print("Funkcja wewnętrzna jako dekorator")
         return func()
