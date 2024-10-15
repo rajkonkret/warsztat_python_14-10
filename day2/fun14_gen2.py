@@ -1,4 +1,4 @@
-from day1.typy_danych_2_kolekcje import lista
+from itertools import zip_longest
 
 generator_1 = [x for x in range(5)]
 print(generator_1)  # [0, 1, 2, 3, 4]
@@ -104,3 +104,54 @@ for i in fibo3:
     # nie ma kolejnych elemntów
 # [(0, 0), (1, 1), (2, 1), (3, 2), (4, 3), (5, 5), (6, 8), (7, 13), (8, 21), (9, 34)]
 # -------
+
+person = ['Radek', 'Tomek', "Zenek", 'Agnieszka', "Paulina"]  # długość 5
+age = [34, 45, 23, 36]  # długość 4
+
+# zip()
+for p, w in zip(person, age):
+    print(p, w)
+# Radek 34
+# Tomek 45
+# Zenek 23
+# Agnieszka 36
+
+zipped = zip_longest(person, age, fillvalue="Brak danych")
+print(zipped)  # <itertools.zip_longest object at 0x000002F67EEE81D0>
+lista = list(zipped)  # wyczerpie generator
+print(lista)
+# [('Radek', 34), ('Tomek', 45), ('Zenek', 23), ('Agnieszka', 36), ('Paulina', 'Brak danych')]
+for item in lista:
+    print(item)
+# ('Radek', 34)
+# ('Tomek', 45)
+# ('Zenek', 23)
+# ('Agnieszka', 36)
+# ('Paulina', 'Brak danych')
+for item in zipped:  # generator juz wyczerpany
+    print(item)
+
+
+def counter(start=0):
+    n = start
+    while True:
+        result = yield n
+        print(result)
+        if result == "OK":
+            break
+        n += 1
+
+
+c = counter(20)
+print(next(c))
+print(next(c))
+print(next(c))
+print(next(c))
+print(next(c))
+try:
+    print(c.send("OK"))
+    # OK
+    # 25
+    # StopIteration
+except StopIteration:
+    print("Koniec")
