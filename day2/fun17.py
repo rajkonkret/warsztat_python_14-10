@@ -30,9 +30,6 @@ def process_transactions(transactions, transaction_type, currency):
     return total
 
 
-print(filter_transactions(transactions, "income"))
-
-
 # [{'id': 1, 'type': 'income', 'amount': 1000, 'currency': 'USD'},
 #  {'id': 3, 'type': 'income', 'amount': 500, 'currency': 'USD'},
 #  {'id': 5, 'type': 'income', 'amount': 700, 'currency': 'USD'},
@@ -80,3 +77,4 @@ print(filter_transactions(transactions, "income"))
 
 if __name__ == '__main__':
     filter_transactions(transactions, 'incoming')
+    print(filter_transactions(transactions, "income"))
