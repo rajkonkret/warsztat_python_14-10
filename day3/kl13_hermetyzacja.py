@@ -16,6 +16,7 @@ class Boat:
     def __test(self):
         print("All tested")
 
+
 boat = Boat("Maxus", 2024)
 boat.sail()
 boat.sail()
@@ -37,3 +38,4 @@ print(boat.__speed)  # 0
 # Speed in knots 50
 # Speed in knots 50
 # 0
+# Enkapsulacja - hermetyzownie pól i wystawianie metod do ich odczytu i zmiany
