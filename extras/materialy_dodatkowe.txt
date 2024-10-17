@@ -121,3 +121,10 @@ https://www.hackerrank.com/domains/python
 https://pl.altapps.net/soft/leetcode#google_vignette
 https://pl.altapps.net/soft/hackerrank-com
 https://www.w3schools.com/python/default.asp
+
+__add__(self, other): Przeciążenie operatora +.
+__sub__(self, other): Przeciążenie operatora -.
+__mul__(self, other): Przeciążenie operatora *.
+__truediv__(self, other): Przeciążenie operatora / (dzielenie).
+__floordiv__(self, other): Przeciążenie operatora // (dzielenie całkowite).
+__mod__(self, other): Przeciążenie operatora % (modulo).
