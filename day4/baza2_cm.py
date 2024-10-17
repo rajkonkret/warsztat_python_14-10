@@ -25,7 +25,7 @@ with SQLiteDBContextManager(db_name) as conn:
     # cursor.execute("INSERT INTO users (name) VALUES (?)", ("Alice",))
     # cursor.execute("INSERT INTO users (name) VALUES (?)", ("Tom",))
     select = cursor.execute("SELECT * FROM users;")
-    print(select) # <sqlite3.Cursor object at 0x000001D36F6E8EC0>
+    print(select)  # <sqlite3.Cursor object at 0x000001D36F6E8EC0>
     for i in select:
         print(i)
 
