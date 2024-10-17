@@ -128,3 +128,6 @@ __mul__(self, other): Przeciążenie operatora *.
 __truediv__(self, other): Przeciążenie operatora / (dzielenie).
 __floordiv__(self, other): Przeciążenie operatora // (dzielenie całkowite).
 __mod__(self, other): Przeciążenie operatora % (modulo).
+
+kody http
+https://pl.wikipedia.org/wiki/Kod_odpowiedzi_HTTP
